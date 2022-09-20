@@ -80,6 +80,9 @@ export class SellassetComponent implements OnInit {
       },
       (error:any)=>
       {
+        if (error.status === 401) {
+          window.location.href = "/login";
+      }
         console.log(error);
       
       });
